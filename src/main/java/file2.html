@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏布局页面</title>
+    <style>
+        .container {
+            display: flex;
+            height: 300px;
+        }
+
+        .child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            height: 100%;
+        }
+
+        .left, .right {
+            width: 300px;
+        }
+
+        .center {
+            flex-grow: 1;
+            background-color: goldenrod;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            function count() {
+                var rs = [];
+                for (var i = 0; i < 5; i++) {
+                    rs[i] = function aa () {
+                        console.log(i)
+                    }
+                }
+                return rs;
+            }
+
+            var ll = count();
+
+            ll[0](1);
+
+            center = document.getElementById("center");
+            let inputText = document.getElementById("inputText");
+            let left = document.querySelector(".left");
+
+            center.addEventListener("click", function () {
+                if (this.style.backgroundColor === "goldenrod") {
+                    this.style.backgroundColor = "paleturquoise";
+                } else {
+                    this.style.backgroundColor = "goldenrod";
+                }
+            });
+
+
+            inputText.addEventListener("input", function () {
+                left.textContent = this.value;
+            });
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="child left">
+        在这里显示文字
+    </div>
+    <div class="child center" id="center">
+        点我改变中间部分的背景色
+    </div>
+    <div class="child right">
+        <input type="text" id="inputText" placeholder="在这里输入文字">
+    </div>
+</div>
+
+
+</body>
+</html>
