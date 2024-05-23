@@ -1,4 +1,4 @@
-
+package leetcode;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,7 +18,7 @@ public class LeetCode71 {
             Deque<String> st = new LinkedList<>();
 
             for(String cur : split){
-                if(cur.equals("..")){
+                if(cur.equals("src/main")){
                     st.removeLast();
                     continue;
                 }

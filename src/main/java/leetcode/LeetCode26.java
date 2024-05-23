@@ -1,3 +1,5 @@
+package leetcode;
+
 /**
  * @Author : llx
  * @Date : 2024/4/17 11:18

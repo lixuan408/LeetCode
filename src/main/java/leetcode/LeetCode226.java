@@ -1,4 +1,4 @@
-//import datastruct.TreeNode;
+package leetcode;//import datastruct.TreeNode;
 
 public class LeetCode226 {
     /**

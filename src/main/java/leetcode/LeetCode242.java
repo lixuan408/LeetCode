@@ -1,3 +1,5 @@
+package leetcode;
+
 public class LeetCode242 {
     public boolean isAnagram(String s, String t) {
 

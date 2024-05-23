@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.HashSet;
 
 public class LeetCode128 {
